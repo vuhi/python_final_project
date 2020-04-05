@@ -1,7 +1,6 @@
 from card import Card
 from card import Face
 from card import Suit
-import numpy
 import random
 
 
@@ -10,7 +9,8 @@ class Deck:
     __deck_size = 52
 
     def __init__(self):
-        self.deck = numpy.empty(self.__deck_size, dtype=Card)
+        print('Init desk ...')
+        self.deck = [None]*self.__deck_size
         self.current_card_count = 0
         count = 0
         for suit in Suit:
